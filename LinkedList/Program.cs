@@ -10,7 +10,19 @@ namespace SinglyLinkedList
     {
         static void Main(string[] args)
         {
-            // TODO
+            SinglyLinkedList myList = new SinglyLinkedList();
+
+            myList.insertFirst(100);
+            myList.insertFirst(50);
+            myList.insertFirst(99);
+            myList.insertFirst(88);
+
+            myList.insertLast(999000);
+
+            myList.displayList();
+            myList.deleteFirst();
+
+            myList.displayList();
         }
     }
 
@@ -40,7 +52,35 @@ namespace SinglyLinkedList
             return temp; // returns the removed Node, formerly the first
         }
 
+        public void displayList()
+        {
+            Console.WriteLine("List (first -- last ");
+            Node current = first;
 
+            // loop through nodes and display their data
+            while (current != null)
+            {
+                current.displayNode();
+                current = current.next;
+            }
+
+            Console.WriteLine();
+        }
+
+        public void insertLast(int data)
+        {
+            Node current = first;
+            // loop to find the last node to set it to current
+            while (current.next != null)
+            {
+                current = current.next;
+            }
+
+            // the next node after current is going to be the last node
+            Node newNode = new Node();
+            newNode.data = data;
+            current.next = newNode;
+        }
 
     }
 

@@ -55,6 +55,12 @@ namespace Stack
             }
         }
 
+        public string peek()
+        {
+            // peek at the node at the top of the stack
+            return stackArray[top];
+        }
+
         private bool isEmpty()
         {
             // safety check to see if stack is empty

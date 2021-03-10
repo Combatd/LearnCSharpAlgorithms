@@ -57,6 +57,11 @@ namespace QueueDemo
             return temp;
         }
 
+        public long peekFront()
+        {
+            return myQueue[front];
+        }
+
         private bool isFull()
         {
             return (items == maxSize);

@@ -7,7 +7,19 @@ namespace QueueDemo
     {
         static void Main(string[] args)
         {
-            //TODO
+            Queue myQueue = new Queue(5);
+            myQueue.insert(100);
+            myQueue.insert(10);
+            myQueue.insert(20);
+            myQueue.insert(30);
+
+            myQueue.view();
+
+            Console.WriteLine($"Front of queue is {myQueue.peekFront()} ");
+
+            Console.WriteLine("About to remove item from queue");
+            myQueue.remove();
+            Console.WriteLine($"Front of queue is {myQueue.peekFront()} ");
         }
     }
 

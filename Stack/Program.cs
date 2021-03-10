@@ -24,7 +24,21 @@ namespace Stack
         {
             maxSize = size;
             stackArray = new string[maxSize];
-            top = -1; // always the lsat item in the array
+            top = -1; // always the last item in the array
+        }
+
+        public void push(string m)
+        {
+            // First, check to see if the stack is full
+            if (isFull())
+            {
+                Console.WriteLine("This stack is full"); 
+            }
+            else
+            {
+                top++;
+                stackArray[top] = m;
+            }
         }
 
     }

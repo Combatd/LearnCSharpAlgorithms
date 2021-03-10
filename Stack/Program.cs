@@ -41,6 +41,20 @@ namespace Stack
             }
         }
 
+        public void pop()
+        {
+            if (isEmpty())
+            {
+
+            }
+        }
+
+        private bool isEmpty()
+        {
+            // safety check to see if stack is empty
+            return (top == -1);
+        }
+
         private bool isFull()
         {
             // maxSize is a value set passed in

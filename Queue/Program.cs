@@ -1,4 +1,5 @@
-﻿using static System.Console;
+﻿//using static System.Console;
+using System;
 
 namespace QueueDemo
 {
@@ -41,6 +42,19 @@ namespace QueueDemo
             rear++;
             myQueue[rear] = j;
             items++;
+        }
+
+        public long remove()
+        {
+            long temp = myQueue[front];
+            front++; // we are removing from the front, so the next node is front now
+
+            if (front == maxSize)
+            {
+                front = 0; // when we do this, we can use the entire array again
+            }
+
+            return temp;
         }
 
         private bool isFull()

@@ -9,4 +9,24 @@ namespace QueueDemo
             //TODO
         }
     }
+
+    public class Queue
+    {
+        private int maxSize;
+        private long[] myQueue; // array of 64-bit integers
+        private int front;
+        private int rear;
+        private int items;
+
+        public Queue(int size)
+        {
+            maxSize = size;
+            myQueue = new long[size];
+            front = 0;
+            rear = -1;
+            items = 0; // track number of pointers
+        }
+
+
+    }
 }

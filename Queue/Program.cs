@@ -29,10 +29,10 @@ namespace QueueDemo
 
         public void insert(long j)
         {
-            //if (isFull())
-            //{
-            //    Console.WriteLine("The queue is full.");
-            //}
+            if (isFull())
+            {
+                Console.WriteLine("The queue is full.");
+            }
 
             if (rear == maxSize - 1)
             {
@@ -42,5 +42,11 @@ namespace QueueDemo
             myQueue[rear] = j;
             items++;
         }
+
+        private bool isFull()
+        {
+            return (items == maxSize);
+        }
+
     }
 }

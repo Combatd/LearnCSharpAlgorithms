@@ -17,12 +17,17 @@ namespace Stack
             theStack.push("Titanic");
             theStack.push("Rocky");
 
+            Console.WriteLine("======= \nAbout to peek:\n");
+            Console.WriteLine($"{theStack.peek()} is at the top of the stack.\n");
+
             Console.WriteLine("======= \nThe Stack contains:\n");
             while(!theStack.isEmpty())
             {
                 string movie = theStack.pop();
                 Console.WriteLine(movie);
             }
+
+
         }
     }
 

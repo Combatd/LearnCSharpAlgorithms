@@ -41,11 +41,17 @@ namespace Stack
             }
         }
 
-        public void pop()
+        public string pop()
         {
             if (isEmpty())
             {
-
+                Console.WriteLine("The stack is empty.");
+                return "--";
+            } else
+            {
+                int old_top = top; // temp variable to copy index position
+                top--;
+                return stackArray[old_top]; // return the stack array with the index position with the pointer/node at the top removed
             }
         }
 

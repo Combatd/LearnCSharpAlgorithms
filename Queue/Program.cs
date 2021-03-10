@@ -59,6 +59,12 @@ namespace QueueDemo
 
         public long peekFront()
         {
+            if (isEmpty())
+            {
+                Console.WriteLine("The queue is empty");
+                return 0;
+            }
+
             return myQueue[front];
         }
 
@@ -72,5 +78,16 @@ namespace QueueDemo
             return (items == maxSize);
         }
 
+        public void view()
+        {
+            Console.Write("[");
+
+            for (int i = 0; i < myQueue.Length; i++)
+            {
+                Console.Write(myQueue[i] + " ");
+            }
+
+            Console.WriteLine("]");
+        }
     }
 }

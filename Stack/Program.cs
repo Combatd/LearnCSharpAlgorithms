@@ -74,6 +74,11 @@ namespace Stack
 
         public string peek()
         {
+            if (top == -1)
+            {
+                return "The stack is empty.";
+            }
+
             // peek at the node at the top of the stack
             return stackArray[top];
         }

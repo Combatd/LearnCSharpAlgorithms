@@ -10,7 +10,19 @@ namespace Stack
     {
         static void Main(string[] args)
         {
-            //TODO
+            Stack theStack = new Stack(4);
+            theStack.push("Star Wars");
+            theStack.push("Jaws");
+            theStack.push("Jaws 2");
+            theStack.push("Titanic");
+            theStack.push("Rocky");
+
+            Console.WriteLine("======= \nThe Stack contains:\n");
+            while(!theStack.isEmpty())
+            {
+                string movie = theStack.pop();
+                Console.WriteLine(movie);
+            }
         }
     }
 
@@ -61,7 +73,7 @@ namespace Stack
             return stackArray[top];
         }
 
-        private bool isEmpty()
+        public bool isEmpty()
         {
             // safety check to see if stack is empty
             return (top == -1);

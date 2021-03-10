@@ -62,6 +62,11 @@ namespace QueueDemo
             return myQueue[front];
         }
 
+        public bool isEmpty()
+        {
+            return (items == 0);
+        }
+
         private bool isFull()
         {
             return (items == maxSize);

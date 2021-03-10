@@ -41,5 +41,12 @@ namespace Stack
             }
         }
 
+        private bool isFull()
+        {
+            // maxSize is a value set passed in
+            // the array is initalized at 0, so we have to -1 to get the index
+            return (maxSize - 1 == top);
+        }
+
     }
 }

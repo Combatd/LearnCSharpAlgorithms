@@ -1,4 +1,5 @@
-﻿using static System.Console;
+﻿// using static System.Console;
+using System;
 
 namespace LinearSearch
 {
@@ -6,7 +7,14 @@ namespace LinearSearch
     {
         static void Main(string[] args)
         {
-            //TODO
+            int theValue = 7;
+            int[] array = new int[] { 1, 4, 5, 7, 9, 22 };
+
+            Console.WriteLine("Our array contains: ");
+            Array.ForEach(array, x => Console.Write(x + " "));
+
+            Console.Write($"\n\nThe result of a linear search for {theValue} is: ");
+            Console.WriteLine(linearSearch(array, theValue));
         }
 
         /// <summary>
@@ -19,7 +27,7 @@ namespace LinearSearch
 
         static int linearSearch(int [] a, int x)
         {
-            for (int = 0; int < a.Length; int++)
+            for (int i = 0; i < a.Length; i++)
             {
                 if (a[i] == x)
                 {

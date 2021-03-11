@@ -1,4 +1,5 @@
-﻿using static System.Console;
+﻿// using static System.Console;
+using System;
 
 namespace BinarySearch
 {
@@ -6,6 +7,14 @@ namespace BinarySearch
     {
         static void Main(string[] args)
         {
+            int theValue = 43;
+            int[] array = new int[] { 11, 22, 43, 54, 57, 59, 61, 78 };
+
+            Console.WriteLine("Our array contains: ");
+            Array.ForEach(array, x => Console.Write(x + " "));
+
+            Console.Write($"\n\nThe result of a binary search for {theValue} is: ");
+            Console.WriteLine(binarySearch(array, theValue));
         }
 
         /// <summary>
